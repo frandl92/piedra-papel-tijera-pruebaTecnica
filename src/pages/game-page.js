@@ -91,7 +91,6 @@ export class GamePage extends LitElement {
   }
 
   constructor() {
-    //https://github.com/UlisesGascon/Piedra-papel-tijeras-lagarto-Spock-con-Arduino
     super();
     this.userChoose = "";
     this.robotChoose = "";
