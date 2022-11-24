@@ -2,7 +2,8 @@ import { LitElement, html, css } from "lit";
 
 import "@polymer/iron-icon";
 import "@polymer/iron-icons/iron-icons";
-
+import "@vaadin/grid";
+import "@vaadin/grid/vaadin-grid-sort-column.js";
 
 export class RankingPage extends LitElement {
   static get properties() {
@@ -50,7 +51,11 @@ export class RankingPage extends LitElement {
     return html`
         <div class="container">
         <iron-icon @click=${this._goToHome} icon="icons:exit-to-app"></iron-icon>
-          
+          <vaadin-grid .items="${this.users}">
+            <vaadin-grid-sort-column path="name"></vaadin-grid-sort-column>
+            <vaadin-grid-sort-column path="wins"></vaadin-grid-sort-column>
+            <vaadin-grid-sort-column path="defeats"></vaadin-grid-sort-column>
+          </vaadin-grid>
         </div>
       
     `;

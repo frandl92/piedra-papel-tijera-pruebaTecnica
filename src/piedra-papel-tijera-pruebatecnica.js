@@ -25,7 +25,6 @@ export class PiedraPapelTijeraPruebatecnica extends navigator (LitElement) {
   }
 
   _logInEvent(event) {
-    event.preventDefault();
     this._goToPage(event.detail);
   }
 
@@ -53,6 +52,12 @@ export class PiedraPapelTijeraPruebatecnica extends navigator (LitElement) {
       }
       case "ranking": {
         return html `<ranking-page @handle-logOut=${this._logInEvent} ></ranking-page>`;
+      }
+      default: {
+        this._goToPage({detail: "home", currentuser:{}});
+        return html `<login-page
+        @handle-navigator=${this._logInEvent}
+      ></login-page>`
       }
     }
   }

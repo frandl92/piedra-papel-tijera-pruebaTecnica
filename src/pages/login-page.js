@@ -67,8 +67,7 @@ export class LoginPage extends LitElement {
     super();
   }
 
-  _onLogin(e) {
-     e.preventDefault()
+  _onLogin() {
     const user = this.shadowRoot.querySelector("#userInput");
     if (user.value === "") {
       alert("Please insert a User");
@@ -110,7 +109,7 @@ export class LoginPage extends LitElement {
                <input  id= "userInput" name= "user" class="input-user" placeholder="Enter your User"></input>
                <button type = "submit" id="btnLogger " class="btn-submit">LET´S GO</button>
              </form>
-             <p @click=${this._goToRanking}>SEE RANKING</p>
+             <p id ="go-ranking" @click=${this._goToRanking} >SEE RANKING</p>
            </div>
             `;
   }

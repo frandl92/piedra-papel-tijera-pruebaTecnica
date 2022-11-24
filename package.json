@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@polymer/iron-icons": "^3.0.1",
+    "@vaadin/vaadin": "^23.2.9",
     "lit": "^2.0.2",
     "lit-element-router": "^2.0.3"
   },
