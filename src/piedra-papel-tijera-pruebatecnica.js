@@ -48,7 +48,7 @@ export class PiedraPapelTijeraPruebatecnica extends navigator (LitElement) {
         ></login-page>`;
       }
       case "game": {
-        return html`<game-page @handle-logOut=${this._logInEvent}></game-page>`;
+        return html`<game-page @handle-logOut=${this._logInEvent} @handle-navigator=${this._logInEvent}></game-page>`;
       }
       case "ranking": {
         return html `<ranking-page @handle-logOut=${this._logInEvent} ></ranking-page>`;
