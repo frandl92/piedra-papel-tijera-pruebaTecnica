@@ -11,7 +11,7 @@ export default css `
   }
 
   .app-title {
-    font-family: "Alfa Slab One", cursive;
+    font-family: "Alfa Slab One", sans-serif;
     text-align: center;
   }
 
@@ -19,7 +19,7 @@ export default css `
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 20px;
   }
 
   .input-user {
@@ -27,8 +27,7 @@ export default css `
     color: #9e7676;
     width: 90%;
     height: 3rem;
-    font-size: 1rem;
-
+    font-size: 20px;
     border-radius: 0.3rem;
     border: 1px solid #9e7676;
     text-align: center;
@@ -44,14 +43,46 @@ export default css `
   .btn-submit {
     background-color: #815b5b;
     border: 0.5rem solid #815b5b;
-    border-radius: 0.3rem;
+    border-radius: 3px;
     font-size: 1rem;
-    color: black;
+    color: white;
     width: 60%;
+    cursor: pointer;
   }
 
   p {
-    font-family: "Patrick Hand", cursive;
-    font-size: 30px;
+    font-family: "Patrick Hand", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  p:hover{
+    color: #FFE15D;
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      gap: 40px;
+    }
+
+    .form-login {
+     gap: 70px;
+    }
+    .input-user {
+      font-size: 35px;
+    }
+
+    .app-title {
+      font-size: 50px;
+    }
+
+    p{
+      font-size: 40px;
+    }
+
+    .btn-submit{
+      height: 50px;
+    }
+
   }
 `

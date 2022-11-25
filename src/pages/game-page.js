@@ -2,7 +2,8 @@ import { LitElement, html } from "lit";
 
 import "@polymer/iron-icon";
 import "@polymer/iron-icons/iron-icons";
-import styles from "../styles/game.styles"
+import styles from "../styles/game.styles";
+
 
 export class GamePage extends LitElement {
   static get properties() {
@@ -24,12 +25,12 @@ export class GamePage extends LitElement {
       },
       doubleClick: {
         type: Boolean,
-      }
+      },
     };
   }
 
   static get styles() {
-    return styles
+    return styles;
   }
 
   constructor() {
@@ -40,9 +41,11 @@ export class GamePage extends LitElement {
     this.doubleClick = false;
     this.currentUser = {};
     this.items = [
-      { item: "🪨", wins: "✂️" },
-      { item: "🗞️", wins: "🪨" },
-      { item: "✂️", wins: "🗞️" },
+      { item: "🪨", wins: "✂️ 🦎" },
+      { item: "🗞️", wins: "🪨 🦹🏽" },
+      { item: "✂️", wins: "🗞️ 🦎" },
+      { item: "🦎", wins: "🦹🏽 🗞️" },
+      { item: "🦹🏽", wins: "✂️ 🪨" },
     ];
   }
 
@@ -75,19 +78,18 @@ export class GamePage extends LitElement {
   }
 
   _getRandomItem() {
-    const randomItem =
-      this.items[Math.floor(Math.random() * this.items.length)];
+    const randomItem = this.items[Math.floor(Math.random() * this.items.length)];
     return randomItem;
   }
 
   _matchResult(userItem, robotItem) {
     this.doubleClick = false;
-    if (userItem.wins === robotItem.item) {
+    if (userItem.wins.includes(robotItem.item)) {
       this.robotChoose = robotItem.item;
       this.winnerIs = "THE WINNER IS------- " + this.currentUser.name;
       this.currentUser.wins++;
       this._updateUser();
-    } else if (userItem.item === robotItem.wins) {
+    } else if (robotItem.wins.includes(userItem.item)) {
       this.robotChoose = robotItem.item;
       this.winnerIs = "THE WINNER IS------- ROBOTO ";
       this.currentUser.defeats++;
@@ -99,12 +101,12 @@ export class GamePage extends LitElement {
     }
   }
 
-  _goToHome(){
+  _goToHome() {
     this.dispatchEvent(
-        new CustomEvent("handle-logOut", {
-          detail: { view: "home", currentuser: {} },
-        })
-      );
+      new CustomEvent("handle-logOut", {
+        detail: { view: "home", currentuser: {} },
+      })
+    );
   }
 
   _goToRanking() {
@@ -118,13 +120,13 @@ export class GamePage extends LitElement {
   render() {
     return html`
       <div class="container">
-      <div class="header">
-      <p id ="go-ranking" @click=${this._goToRanking} >SEE RANKING</p>
-        <iron-icon
-          @click=${this._goToHome}
-          icon="icons:exit-to-app"
-        ></iron-icon>
-      </div>
+        <div class="header">
+          <p id="go-ranking" @click=${this._goToRanking}>SEE RANKING</p>
+          <iron-icon
+            @click=${this._goToHome}
+            icon="icons:exit-to-app"
+          ></iron-icon>
+        </div>
         <div class="greeting-container">
           <h2 class="user-name">Hi! ${this.currentUser.name}!</h2>
           <p class="results">
@@ -136,8 +138,10 @@ export class GamePage extends LitElement {
         <div class="btn-container">
           ${this.items.map(
             (item) =>
-              html`<button @click=${() => this._itemSelected(item)}
-               ?disabled=${this.doubleClick === true ? true  : false}>
+              html`<button
+                @click=${() => this._itemSelected(item)}
+                ?disabled=${this.doubleClick ? true : false}
+              >
                 ${item.item}
               </button>`
           )}

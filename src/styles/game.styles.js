@@ -1,5 +1,6 @@
 import {css} from "lit"
 
+
 export default css `
 .container {
     background-color: #fff8ea;
@@ -9,7 +10,7 @@ export default css `
   }
 
   .header {
-    width: 22.5%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -17,7 +18,7 @@ export default css `
   }
 
   p{
-    font-family: "Patrick Hand", cursive;
+    font-family: "Patrick Hand", sans-serif;
   }
 
   .greeting-container {
@@ -28,18 +29,18 @@ export default css `
   }
   .user-name {
     font-size: 40px;
-    font-family: "Patrick Hand", cursive;
+    font-family: "Patrick Hand", sans-serif;
   }
 
   .results {
     text-align: center;
-    font-family: "Patrick Hand", cursive;
+    font-family: "Patrick Hand", sans-serif;
     font-size: 30px;
   }
 
   .winner {
     text-align: center;
-    font-family: "Patrick Hand", cursive;
+    font-family: "Patrick Hand", sans-serif;
     font-size: 20px;
   }
 
@@ -47,6 +48,9 @@ export default css `
     margin-top: 30px;
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
   }
 
   button {
@@ -66,5 +70,20 @@ export default css `
 
   .item-selected {
     font-size: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    button {
+      height: 80px;
+      width: 100px;
+    }
+    .header {
+      width: 22.5%;
+    }
+
+    .btn-container{
+      width:90%;
+      gap: 30px;
+    }
   }
 `

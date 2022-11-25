@@ -1,9 +1,10 @@
-import { LitElement, html, css } from "lit";
+import { LitElement, html } from "lit";
 
 import "@polymer/iron-icon";
 import "@polymer/iron-icons/iron-icons";
 import "@vaadin/grid";
 import "@vaadin/grid/vaadin-grid-sort-column.js";
+import styles from "../styles/ranking.styles.js"
 
 export class RankingPage extends LitElement {
   static get properties() {
@@ -15,18 +16,7 @@ export class RankingPage extends LitElement {
   }
 
   static get styles() {
-    return css`
-       
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 10px;
-        margin: auto;
-        margin-top: 30px;
-        width: 80%;
-      }
-    `;
+    return styles
   }
 
   constructor() {
@@ -50,7 +40,7 @@ export class RankingPage extends LitElement {
   render() {
     return html`
         <div class="container">
-        <iron-icon @click=${this._goToHome} icon="icons:exit-to-app"></iron-icon>
+        <iron-icon @click=${this._goToHome} icon="icons:exit-to-app" class="img-icon"></iron-icon>
           <vaadin-grid .items="${this.users}">
             <vaadin-grid-sort-column path="name"></vaadin-grid-sort-column>
             <vaadin-grid-sort-column path="wins"></vaadin-grid-sort-column>
