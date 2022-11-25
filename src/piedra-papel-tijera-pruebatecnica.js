@@ -19,7 +19,7 @@ export class PiedraPapelTijeraPruebatecnica extends navigator (LitElement) {
 
   constructor() {
     super();
-    this.page = "home";
+    this.page = "game";
     this.currentUser = {};
     this.navigator(location)
   }
@@ -37,7 +37,7 @@ export class PiedraPapelTijeraPruebatecnica extends navigator (LitElement) {
 
   navigator(location) {
     const path = location.pathname;
-    this.page = path === "/" ? "home" : path.slice(1);
+    this.page = path === "/" ? "game" : path.slice(1);
   }
 
   _handlerPages() {

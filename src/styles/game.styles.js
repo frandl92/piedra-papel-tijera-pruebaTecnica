@@ -13,8 +13,8 @@ export default css `
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding-top: 50px;
+    justify-content: space-between;
+    padding-top: 30px;
   }
 
   p{
@@ -78,7 +78,8 @@ export default css `
       width: 100px;
     }
     .header {
-      width: 22.5%;
+      width: 65%;
+justify-content: space-between
     }
 
     .btn-container{

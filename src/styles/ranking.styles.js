@@ -8,7 +8,7 @@ export default css`
     gap: 10px;
     margin: auto;
     margin-top: 30px;
-    width: 50%;
+    width: 60%;
   }
   iron-icon{
     cursor: pointer;
