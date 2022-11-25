@@ -1,4 +1,4 @@
-import { LitElement, html, css } from "lit";
+import { LitElement, html } from "lit";
 
 import "@polymer/iron-icon";
 import "@polymer/iron-icons/iron-icons";
@@ -22,6 +22,9 @@ export class GamePage extends LitElement {
       winnerIs: {
         type: String,
       },
+      doubleClick: {
+        type: Boolean,
+      }
     };
   }
 
@@ -34,6 +37,7 @@ export class GamePage extends LitElement {
     this.userChoose = "";
     this.robotChoose = "";
     this.winnerIs = "";
+    this.doubleClick = false;
     this.currentUser = {};
     this.items = [
       { item: "🪨", wins: "✂️" },
@@ -59,6 +63,7 @@ export class GamePage extends LitElement {
     this.userChoose = item.item;
     this.robotChoose = "";
     this.winnerIs = "";
+    this.doubleClick = true;
     setTimeout(() => {
       this._startMatch(item);
     }, 1000);
@@ -76,6 +81,7 @@ export class GamePage extends LitElement {
   }
 
   _matchResult(userItem, robotItem) {
+    this.doubleClick = false;
     if (userItem.wins === robotItem.item) {
       this.robotChoose = robotItem.item;
       this.winnerIs = "THE WINNER IS------- " + this.currentUser.name;
@@ -130,7 +136,8 @@ export class GamePage extends LitElement {
         <div class="btn-container">
           ${this.items.map(
             (item) =>
-              html`<button @click=${() => this._itemSelected(item)}>
+              html`<button @click=${() => this._itemSelected(item)}
+               ?disabled=${this.doubleClick === true ? true  : false}>
                 ${item.item}
               </button>`
           )}
