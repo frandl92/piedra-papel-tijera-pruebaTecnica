@@ -37,6 +37,7 @@ export class PiedraPapelTijeraPruebatecnica extends navigator (LitElement) {
 
   navigator(location) {
     const path = location.pathname;
+    console.log(path)
     this.page = path === "/" ? "home" : path.slice(1);
   }
 
