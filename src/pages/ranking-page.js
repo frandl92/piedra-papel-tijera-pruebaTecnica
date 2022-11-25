@@ -4,7 +4,7 @@ import "@polymer/iron-icon";
 import "@polymer/iron-icons/iron-icons";
 import "@vaadin/grid";
 import "@vaadin/grid/vaadin-grid-sort-column.js";
-import styles from "../styles/ranking.styles.js"
+import styles from "../styles/ranking.styles.js";
 
 export class RankingPage extends LitElement {
   static get properties() {
@@ -16,7 +16,7 @@ export class RankingPage extends LitElement {
   }
 
   static get styles() {
-    return styles
+    return styles;
   }
 
   constructor() {
@@ -29,25 +29,28 @@ export class RankingPage extends LitElement {
     }
   }
 
-  _goToHome(){
+  _goToHome() {
     this.dispatchEvent(
-        new CustomEvent("handle-logOut", {
-          detail: { view: "home", currentuser: {} },
-        })
-      );
+      new CustomEvent("handle-logOut", {
+        detail: { view: "home", currentuser: {} },
+      })
+    );
   }
 
   render() {
     return html`
-        <div class="container">
-        <iron-icon @click=${this._goToHome} icon="icons:exit-to-app" class="img-icon"></iron-icon>
-          <vaadin-grid .items="${this.users}">
-            <vaadin-grid-sort-column path="name"></vaadin-grid-sort-column>
-            <vaadin-grid-sort-column path="wins"></vaadin-grid-sort-column>
-            <vaadin-grid-sort-column path="defeats"></vaadin-grid-sort-column>
-          </vaadin-grid>
-        </div>
-      
+      <div class="container">
+        <iron-icon
+          @click=${this._goToHome}
+          icon="icons:exit-to-app"
+          class="img-icon"
+        ></iron-icon>
+        <vaadin-grid .items="${this.users}">
+          <vaadin-grid-sort-column path="name"></vaadin-grid-sort-column>
+          <vaadin-grid-sort-column path="wins"></vaadin-grid-sort-column>
+          <vaadin-grid-sort-column path="defeats"></vaadin-grid-sort-column>
+        </vaadin-grid>
+      </div>
     `;
   }
 }

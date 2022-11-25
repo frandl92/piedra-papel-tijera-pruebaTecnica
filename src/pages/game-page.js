@@ -4,7 +4,6 @@ import "@polymer/iron-icon";
 import "@polymer/iron-icons/iron-icons";
 import styles from "../styles/game.styles";
 
-
 export class GamePage extends LitElement {
   static get properties() {
     return {
@@ -78,7 +77,8 @@ export class GamePage extends LitElement {
   }
 
   _getRandomItem() {
-    const randomItem = this.items[Math.floor(Math.random() * this.items.length)];
+    const randomItem =
+      this.items[Math.floor(Math.random() * this.items.length)];
     return randomItem;
   }
 

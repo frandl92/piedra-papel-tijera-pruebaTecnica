@@ -10,22 +10,21 @@ export default css`
     margin-top: 30px;
     width: 60%;
   }
-  iron-icon{
+  iron-icon {
     cursor: pointer;
   }
 
-  iron-icon:hover{
-    color: #FFE15D;
+  iron-icon:hover {
+    color: #ffe15d;
   }
 
   @media (min-width: 1200px) {
     .container {
       width: 90%;
     }
-    iron-icon{
+    iron-icon {
       height: 60px;
       width: 60px;
-
     }
   }
 `;

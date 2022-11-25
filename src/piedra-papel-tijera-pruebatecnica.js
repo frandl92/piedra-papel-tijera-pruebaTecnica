@@ -5,7 +5,7 @@ import "./pages/login-page.js";
 import "./pages/game-page.js";
 import "./pages/ranking-page.js";
 
-export class PiedraPapelTijeraPruebatecnica extends navigator (LitElement) {
+export class PiedraPapelTijeraPruebatecnica extends navigator(LitElement) {
   static get properties() {
     return {
       page: { type: String },
@@ -19,9 +19,9 @@ export class PiedraPapelTijeraPruebatecnica extends navigator (LitElement) {
 
   constructor() {
     super();
-    this.page = "game";
+    this.page = "home";
     this.currentUser = {};
-    this.navigator(location)
+    this.navigator(location);
   }
 
   _logInEvent(event) {
@@ -37,7 +37,7 @@ export class PiedraPapelTijeraPruebatecnica extends navigator (LitElement) {
 
   navigator(location) {
     const path = location.pathname;
-    this.page = path === "/" ? "game" : path.slice(1);
+    this.page = path === "/" ? "home" : path.slice(1);
   }
 
   _handlerPages() {
@@ -48,16 +48,21 @@ export class PiedraPapelTijeraPruebatecnica extends navigator (LitElement) {
         ></login-page>`;
       }
       case "game": {
-        return html`<game-page @handle-logOut=${this._logInEvent} @handle-navigator=${this._logInEvent}></game-page>`;
+        return html`<game-page
+          @handle-logOut=${this._logInEvent}
+          @handle-navigator=${this._logInEvent}
+        ></game-page>`;
       }
       case "ranking": {
-        return html `<ranking-page @handle-logOut=${this._logInEvent} ></ranking-page>`;
+        return html`<ranking-page
+          @handle-logOut=${this._logInEvent}
+        ></ranking-page>`;
       }
       default: {
-        this._goToPage({detail: "home", currentuser:{}});
-        return html `<login-page
-        @handle-navigator=${this._logInEvent}
-      ></login-page>`
+        this._goToPage({ detail: "home", currentuser: {} });
+        return html`<login-page
+          @handle-navigator=${this._logInEvent}
+        ></login-page>`;
       }
     }
   }
@@ -67,4 +72,7 @@ export class PiedraPapelTijeraPruebatecnica extends navigator (LitElement) {
   }
 }
 
-customElements.define('piedra-papel-tijera-pruebatecnica', PiedraPapelTijeraPruebatecnica);
+customElements.define(
+  "piedra-papel-tijera-pruebatecnica",
+  PiedraPapelTijeraPruebatecnica
+);

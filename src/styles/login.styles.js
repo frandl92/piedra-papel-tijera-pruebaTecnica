@@ -1,7 +1,7 @@
-import {css} from "lit"
+import { css } from "lit";
 
-export default css `
-.container {
+export default css`
+  .container {
     background-color: #fff8ea;
     display: flex;
     flex-direction: column;
@@ -56,8 +56,8 @@ export default css `
     cursor: pointer;
   }
 
-  p:hover{
-    color: #FFE15D;
+  p:hover {
+    color: #ffe15d;
   }
 
   @media (min-width: 1200px) {
@@ -66,7 +66,7 @@ export default css `
     }
 
     .form-login {
-     gap: 70px;
+      gap: 70px;
     }
     .input-user {
       font-size: 35px;
@@ -76,13 +76,12 @@ export default css `
       font-size: 50px;
     }
 
-    p{
+    p {
       font-size: 40px;
     }
 
-    .btn-submit{
+    .btn-submit {
       height: 50px;
     }
-
   }
-`
+`;

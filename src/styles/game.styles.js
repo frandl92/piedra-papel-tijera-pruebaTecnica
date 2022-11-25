@@ -1,8 +1,7 @@
-import {css} from "lit"
+import { css } from "lit";
 
-
-export default css `
-.container {
+export default css`
+  .container {
     background-color: #fff8ea;
     display: flex;
     flex-direction: column;
@@ -17,7 +16,7 @@ export default css `
     padding-top: 30px;
   }
 
-  p{
+  p {
     font-family: "Patrick Hand", sans-serif;
   }
 
@@ -79,12 +78,12 @@ export default css `
     }
     .header {
       width: 65%;
-justify-content: space-between
+      justify-content: space-between;
     }
 
-    .btn-container{
-      width:90%;
+    .btn-container {
+      width: 90%;
       gap: 30px;
     }
   }
-`
+`;

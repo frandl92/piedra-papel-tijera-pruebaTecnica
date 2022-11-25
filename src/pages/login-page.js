@@ -8,7 +8,7 @@ export class LoginPage extends LitElement {
   }
 
   static get styles() {
-    return styles
+    return styles;
   }
 
   constructor() {
