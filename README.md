@@ -12,7 +12,7 @@ If you want to play, please click [let's play!](https://zippy-flan-c20fff.netlif
 
 You will have to choose between, THE POWERFULL ROCK, THE THIN PAPER and THE SHARPY SCISSORS.
 Once you have choosen your item, it's time to Roboto to select his item. Who wins? the rules of the game are the following.
-Rock crushes Scissors (rock wins), Scissors cut Paper (scissors wins), Paper covers Rock (paper wins). It You and Roboto chooses the same item, imagine what happens... CORRECT! IT`S A TIE.
+Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paer diaproves Spock, Spock vaporizes Rock, Rock crushes Scissors.
 
 
 ## First Steps
