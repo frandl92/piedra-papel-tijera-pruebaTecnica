@@ -70,6 +70,11 @@ export default css`
     font-size: 20px;
   }
 
+  img{
+    width: 30px;
+    height: 40px;
+  }
+
   .result-container {
     margin-top: 30px;
     display: flex;

@@ -8,6 +8,8 @@ export default css`
     align-items: center;
     justify-content: center;
     margin-top: 85px;
+    width: 100vw;
+    height: 100vh;
     
   }
 
