@@ -7,7 +7,8 @@ export default css`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 85px;
+    
   }
 
   .app-title {
@@ -54,6 +55,9 @@ export default css`
     font-family: "Patrick Hand", sans-serif;
     font-size: 20px;
     cursor: pointer;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 3px;
   }
 
   p:hover {
@@ -68,6 +72,7 @@ export default css`
     .form-login {
       gap: 70px;
     }
+
     .input-user {
       font-size: 35px;
     }
@@ -78,6 +83,9 @@ export default css`
 
     p {
       font-size: 40px;
+      border: 1px solid black;
+      padding: 10px;
+      border-radius: 3px;
     }
 
     .btn-submit {

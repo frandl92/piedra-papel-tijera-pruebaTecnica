@@ -16,8 +16,17 @@ export default css`
     padding-top: 30px;
   }
 
-  p {
+  .results {
     font-family: "Patrick Hand", sans-serif;
+  }
+
+  #go-ranking {
+    font-family: "Patrick Hand", sans-serif;
+    cursor: pointer;
+  }
+
+  #go-ranking:hover {
+    color: #ffe15d;
   }
 
   .greeting-container {
