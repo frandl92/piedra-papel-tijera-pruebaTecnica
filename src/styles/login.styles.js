@@ -7,8 +7,6 @@ export default css`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
   }
 
   .app-title {
