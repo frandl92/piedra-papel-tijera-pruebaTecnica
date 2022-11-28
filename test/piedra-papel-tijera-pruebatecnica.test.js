@@ -34,6 +34,13 @@ describe("PiedraPapelTijera", () => {
     expect(rankingPage).to.exist;
   });
 
+  it ("navigates to game page if we navigate incorrectly", async () => {
+    element._goToPage({detail: "random", currentuser: {}});
+    await elementUpdated(element);
+    const rankingPage = element.shadowRoot.querySelector("ranking-page");
+    expect(rankingPage).to.exist;
+  })
+
   it("navigates to game page, with user in local storage", async () => {
     element._goToPage({
       detail: "game",
