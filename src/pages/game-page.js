@@ -40,11 +40,11 @@ export class GamePage extends LitElement {
     this.doubleClick = false;
     this.currentUser = {};
     this.items = [
-      { item: "🪨", wins: "✂️ 🦎", src: "./assets/rock.png" },  
-      { item: "🗞️", wins: "🪨 🦹🏽", src: "./assets/paper.png"},
-      { item: "✂️", wins: "🗞️ 🦎", src: "./assets/scissors.png" },
-      { item: "🦎", wins: "🦹🏽 🗞️", src: "./assets/lizard.svg" },
-      { item: "🦹🏽", wins: "✂️ 🪨", src: "./assets/spock.png" },
+      { item: "🪨", wins: "✂️ 🦎", src: "../assets/rock.png" },  
+      { item: "🗞️", wins: "🪨 🦹🏽", src: "../assets/paper.png"},
+      { item: "✂️", wins: "🗞️ 🦎", src: "../assets/scissors.png" },
+      { item: "🦎", wins: "🦹🏽 🗞️", src: "../assets/lizard.svg" },
+      { item: "🦹🏽", wins: "✂️ 🪨", src: "../assets/spock.png" },
     ];
   }
 
