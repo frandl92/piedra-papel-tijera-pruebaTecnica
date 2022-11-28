@@ -142,7 +142,7 @@ export class GamePage extends LitElement {
                 @click=${() => this._itemSelected(item)}
                 ?disabled=${this.doubleClick ? true : false}
               >
-              <img src="${item.src}" alt="Rock"/>
+              <img src="${item.src}"/>
               </button>`
           )}
         </div>
